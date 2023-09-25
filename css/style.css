@@ -1,0 +1,175 @@
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Vollkorn", Georgia;
+}
+
+/*Estrutura e menu*/
+.estrutura {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-template-areas: "cabecalho cabecalho cabecalho" "sidenav content anuncios" "rodape rodape rodape";
+}
+.estrutura .cabecalho {
+  grid-area: cabecalho;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+.estrutura .cabecalho ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.estrutura .cabecalho ul li a {
+  padding: 10px;
+  color: white;
+  font-size: 1.125em;
+  background: rgba(0, 0, 0, 0.1);
+  transition: 0.1s;
+  border-radius: 5px;
+}
+.estrutura .cabecalho ul li a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.estrutura .cabecalho ul li + li {
+  margin-left: 30px;
+}
+.estrutura .cabecalho .logo {
+  max-width: 200px;
+}
+.estrutura .sidenav {
+  grid-area: sidenav;
+}
+.estrutura .content {
+  grid-area: content;
+}
+.estrutura .anuncios {
+  grid-area: anuncios;
+}
+.estrutura .rodape {
+  grid-area: rodape;
+}
+
+/*sidenav*/
+.sidenav {
+  grid-area: sidenav;
+  padding: 30px;
+}
+.sidenav li a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  transition: 0.1s ease-in-out;
+}
+.sidenav li a:hover {
+  background: #b07dfb;
+}
+.sidenav li a img {
+  width: 100%;
+}
+
+/*rodape*/
+.rodape {
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  padding: 30px;
+}
+.rodape p {
+  color: white;
+  text-align: center;
+}
+
+/*content*/
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.content .titulo {
+  color: #b07dfb;
+}
+.content .titulo h1 {
+  font-size: 3.55em;
+  line-height: 1;
+  font-weight: 700;
+}
+.content .coluna-larga {
+  grid-column: 1/-1;
+}
+.content .img1 {
+  grid-row: span 2;
+}
+
+/*anuncios*/
+.anuncios {
+  display: grid;
+  align-content: start;
+  padding: 30px;
+  gap: 30px;
+}
+.anuncios img {
+  border-radius: 5px;
+  display: block;
+}
+
+/*caracteristicas*/
+.caracteristicas {
+  display: flex;
+  align-items: flex-start;
+}
+.caracteristicas div:first-child {
+  margin-right: 30px;
+}
+.caracteristicas .numero {
+  display: block;
+  font-size: 3em;
+  line-height: 1;
+  color: #b07dfb;
+  margin: 10px auto;
+}
+.caracteristicas .rotulo {
+  display: block;
+  background: white;
+  color: #b07dfb;
+  position: relative;
+  top: 2px;
+  border-radius: 0 0 5px 5px;
+}
+.caracteristicas div {
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  width: 80px;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */
